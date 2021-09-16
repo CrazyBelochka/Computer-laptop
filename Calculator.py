@@ -1,12 +1,14 @@
 import math
 import unittest
-import datetime
+from datetime import date
+from datetime import datetime
+from datetime import time
 from array import *
-
+#from dateutil import parser
 
 class Human():
     def __init__(self, name, age, weight, food, calfood, normcal, money, allmoney,
-                 cal_in_day, money_in_day, money_remained, date_ate):
+                 cal_in_day, money_in_day, money_remained):
         self.name = name
         self.age = age
         self.weight = weight
@@ -18,15 +20,22 @@ class Human():
         self.cal_in_day = cal_in_day
         self.money_in_day = money_in_day
         self.money_remained = money_remained
-        self.date_ate - date_ate
 
     def addrecord(myArray):
         print(f'Укажите количество человечков: ')
         count = int(input())
         for i in range(1, count + 1):
-            print(f'Введите сегодняшнюю дату(через запятую, год, месяц, день): ')
-            date_ate = datetime.date(input()) #надо сделать так, чтобы информацию по дате приема пищи
-            # могла быть доступна, так как нужно будет короче формировать инфу по неделе/месяцу
+            # print(f'Введите сегодняшнюю дату( год-месяц-день): ')
+            # today = parser.parse(input())
+            # year = int(input())
+            # month = int(input())
+            # day = int(input())
+            # today = datetime.date(year, month, day)
+            # date_entry = input()
+            # year, month, day = map(int, date_entry.split('-'))
+            # today = datetime.date(year, month, day)
+            #print(today)
+            #date_ate = input(datetime.date())
 
             print(f'Введите ваше имя, возраст и вес: ')
             print(f'Имя: ')
@@ -55,7 +64,7 @@ class Human():
             print(f'Вот сколько вы потратили на покушать в общем: ')
             print(allmoney)
             myArray.append(Human(name, age, weight, food, calfood, normcal, money_meal, allmoney,
-                                 cal_in_day, money_in_day, money_remained, date_ate))
+                                 cal_in_day, money_in_day, money_remained))
 
     def show(self):
         print(f'Имя: ', self.name, f' Возраст: ', self.age, f' Вес: ', self.weight)
@@ -121,7 +130,7 @@ class CaloriesCalculator(Calculator):
 
         }[self]
 
-    def new_meal(self, name, myArray):
+    def new_meal(name, myArray):
         for i in range(0, len(myArray)):
             if (myArray[i].name == name):
                 print(f'Напишите, что вы покушали:')
@@ -157,7 +166,7 @@ class CashCalculator(Calculator):
             if (myArray[i].name == name):
                 print('Имя: ', myArray[i].name, 'Возраст: ', myArray[i].age, 'Вес: ', myArray[i].weight,
                       'Сколько осталось накушать калорий в течении дня: ', myArray[i].cal_in_day,
-                      'Сколько затрачено денег: ', myArray[i].allmoney, sep='\n')
+                      'Сколько затрачено денег: ', myArray[i].allmoney,  sep='\n')
                 print()
                 print(f'---------------------------------------------------------')
 

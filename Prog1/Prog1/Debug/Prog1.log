@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\Роман\source\repos\Prog3sem\Prog1\Prog1\game.h(141,14): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Роман\source\repos\Prog3sem\Prog1\Prog1\game.h(845,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Роман\source\repos\Prog3sem\Prog1\Prog1\game.h(1185,16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Роман\source\repos\Prog3sem\Prog1\Prog1\game.h(263): warning C4715: Game::NumberChecker: значение возвращается не при всех путях выполнения
+  Prog1.vcxproj -> C:\Users\Роман\source\repos\Prog3sem\Prog1\Debug\Prog1.exe
